@@ -65,6 +65,17 @@ protoc 下载和安装：<https://github.com/protocolbuffers/protobuf/releases>
 
 ### 服务端
 
+在项目 `config/config.php` 中配置：
+
+```php
+[
+    'ignorePaths' => [
+        // 添加RPC忽略目录
+        \dirname(__DIR__) . \DIRECTORY_SEPARATOR . 'grpc',
+    ],
+]
+```
+
 如果你用主服务器：
 
 ```php
